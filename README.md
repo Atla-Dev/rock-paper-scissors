@@ -9,6 +9,8 @@ A simple interactive game of rock, paper, scissors.
 ## Learning Outcomes
 - Better understanding of using pseudocode to plan out the solution
 - Better understanding of math.random
+- Better understanding of conditional branches
+
 
 ## Credits
 - The Odin Project

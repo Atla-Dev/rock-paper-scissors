@@ -24,7 +24,7 @@ if (getHumanChoice === scissors && getComputerChoice === scissors) and if (getHu
         } else {
             hand = 'scissors';
         }   
-        return computerChoice = hand.toLowerCase();
+        return computerChoice = hand;
     }
 
 
@@ -40,7 +40,7 @@ if (getHumanChoice === scissors && getComputerChoice === scissors) and if (getHu
      
     function playRound(humanChoice, computerChoice) {
         
-            if (humanChoice === computerChoice) {
+            if (humanChoice.toLowerCase() == computerChoice) {
                 console.log("Its a tie!");
             } else if ((humanChoice === 'rock' && computerChoice === 'scissors') || (humanChoice === 'scissors' && computerChoice === 'paper') ||(humanChoice === 'paper' && computerChoice === 'rock')) {
                 humanScore += 1;
@@ -52,11 +52,12 @@ if (getHumanChoice === scissors && getComputerChoice === scissors) and if (getHu
     }
 
     function playGame() {
-        playRound(getHumanChoice(),getComputerChoice());
-        playRound(getHumanChoice(),getComputerChoice());
-        playRound(getHumanChoice(),getComputerChoice());
-        playRound(getHumanChoice(),getComputerChoice());
-        playRound(getHumanChoice(),getComputerChoice());
+        playRound(getHumanChoice(),getComputerChoice(3));
+        playRound(getHumanChoice(),getComputerChoice(3));
+        playRound(getHumanChoice(),getComputerChoice(3));
+        playRound(getHumanChoice(),getComputerChoice(3));
+        playRound(getHumanChoice(),getComputerChoice(3)); 
+        
 
         if (humanScore == computerScore) {
             console.log("How boring, It's a Tie!");
