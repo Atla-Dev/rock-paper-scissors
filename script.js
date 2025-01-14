@@ -9,10 +9,15 @@ if (getHumanChoice === rock && getComputerChoice === paper) and if (getHumanChoi
 if (getHumanChoice === rock && getComputerChoice === rock),
 if (getHumanChoice === scissors && getComputerChoice === scissors) and if (getHumanChoice === paper && getComputerChoice === paper) output "Its a tie!"
 */
+
+// Global scope variables
+
     let computerChoice;
     let humanChoice;
     let humanScore = 0;
     let computerScore = 0;
+
+// Function to get the computers input from a randomly generated number between 0 - 2 which is then assigned to a value
 
     function getComputerChoice(max) {
         hand = Math.floor(Math.random() * max);
@@ -27,6 +32,7 @@ if (getHumanChoice === scissors && getComputerChoice === scissors) and if (getHu
         return computerChoice = hand;
     }
 
+// Function to get the players input
 
      function getHumanChoice() {
 
@@ -38,6 +44,8 @@ if (getHumanChoice === scissors && getComputerChoice === scissors) and if (getHu
         }
      }
      
+// Function to decide outcomes based on conditions being met, increments each score dependant on conditions
+
     function playRound(humanChoice, computerChoice) {
         
             if (humanChoice.toLowerCase() == computerChoice) {
@@ -50,6 +58,8 @@ if (getHumanChoice === scissors && getComputerChoice === scissors) and if (getHu
                 console.log(`The Human chose ${humanChoice} and the Computers chose ${computerChoice} Computers rise up! You win this one!`);
             }
     }
+
+// Function to compare players hand to computers to decide outcome
 
     function playGame() {
         playRound(getHumanChoice(),getComputerChoice(3));
@@ -69,6 +79,6 @@ if (getHumanChoice === scissors && getComputerChoice === scissors) and if (getHu
         console.log("Player Score: " + humanScore + " " + "Computer Score: " + computerScore)
 
     }
-
+// Initiates the game
     playGame(); 
     
